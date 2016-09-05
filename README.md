@@ -22,18 +22,18 @@ The following is the steps to install the application.
 
    ```apache
    <VirtualHost *:80>
-    ServerName yourdomain.dev
-    DocumentRoot "/usr/local/httpd2.2/htdocs/pangu/web/"
-    ErrorLog "logs/pangu.com-error_log"
-    CustomLog "logs/pangu.com-access_log" common
+       ServerName yourdomain.dev
+       DocumentRoot "/usr/local/httpd2.2/htdocs/pangu/web/"
+       ErrorLog "logs/pangu.com-error_log"
+       CustomLog "logs/pangu.com-access_log" common
 
-    <Directory "/usr/local/httpd2.2/htdocs/pangu/web/">
-        RewriteEngine on
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule . index.php
-        DirectoryIndex index.php
-    </Directory>
+       <Directory "/usr/local/httpd2.2/htdocs/pangu/web/">
+           RewriteEngine on
+           RewriteCond %{REQUEST_FILENAME} !-f
+           RewriteCond %{REQUEST_FILENAME} !-d
+           RewriteRule . index.php
+           DirectoryIndex index.php
+       </Directory>
    </VirtualHost>
    ```
 
